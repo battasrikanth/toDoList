@@ -12,9 +12,19 @@
       crossorigin="anonymous"
     />
     <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
       .p3 {
         flex-grow: 1;
+        font-size: 18px;
       }
+      h4{
+        font-size: 22px;
+      }
+
       img{
         width:20px ;
       }
@@ -26,11 +36,14 @@
         display: inline-block;
         visibility: visible;
       }
+      .container{
+        max-width: 500px;
+      }
     </style>
   </head>
   <body>
     <main>
-      <div class="container w-50">
+      <div class="container w-95">
         <div class="my-5 d-flex align-items-center justify-content-center">
           <input
             id="input1"
@@ -40,16 +53,16 @@
             aria-label="Enter Task"
             required
           />
-          <button id="add" class="btn btn-outline-success m-2" type="button">
+          <button id="add" class="btn btn-outline-success m-1" type="button">
             <img src="add.png">
           </button>
         </div>
 
         <div class="tasks">
-          <h4 class="mx-2 my-0">Pending tasks 🎯</h4>
+          <h4 class="mx-1 my-0">Pending tasks 🎯</h4>
           <br>
           <ul class="list-group" id="parentList">
-            <li class="list-group-item d-flex justify-content-between my-1 mx-5 p-1">
+            <li class="list-group-item d-flex justify-content-between my-1 mx-1 p-1">
              <p class="empty"> No pending tasks 🙅‍♂️ </p>
             </li> 
           </ul>

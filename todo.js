@@ -5,7 +5,7 @@ const ParentList = document.getElementById("parentList");
 const ParentList2 = document.getElementById("parentList2");
 const CL = document.getElementById("CL")
 let emptyMsg = document.createElement("li");
-emptyMsg.classList = "list-group-item mx-5 my-1 p-1 outline-none";
+emptyMsg.classList = "list-group-item mx-1 my-1 p-1 outline-none";
 emptyMsg.innerHTML = `<p class="empty"> No pending tasks 🙅‍♂️ </p>`;
 
 function addTask(e) {
@@ -19,17 +19,17 @@ function addTask(e) {
   }
   let newChild = document.createElement("li");
   newChild.className =
-    "list-group-item d-flex justify-content-between mx-5 my-1 p-1";
+    "list-group-item d-flex justify-content-between mx-1 my-1 p-1";
   newChild.innerHTML = `<p class="p3"> ${newTask}</p>
-                <button class="edit btn btn-outline-warning mx-2 p-1 hidden" onclick="editt(this)">
+                <button class="edit btn btn-outline-warning mx-1 p-1 hidden" onclick="editt(this)">
                   Edit
                 </button>
                
-                <button class="remove btn btn-outline-danger mx-2 p-1 hidden" onclick="removee(this)">
+                <button class="remove btn btn-outline-danger mx-1 p-1 hidden" onclick="removee(this)">
                   <img src="remove.gif">
                 </button>
                 <button
-          class="completed btn btn-outline-success mx-2 p-1"
+          class="completed btn btn-outline-success mx-1 p-1"
           onclick="completedd(this)"
         >
         <img src="completed.gif">
@@ -91,12 +91,12 @@ function completedd(f){
   removee(f)
   if (ParentList2.children.length === 0){
   let heading=document.createElement("h4")
-  heading.classList="mx-2 mt-3"
+  heading.classList="mx-1 mt-3"
   heading.innerHTML= " Completed tasks 🎉"
   CL.prepend(heading)
   }
   let ct = document.createElement("li");
-  ct.classList ="list-group-item d-flex justify-content-between mx-5 my-1 p-1";
+  ct.classList ="list-group-item d-flex justify-content-between mx-1 my-1 p-1";
   ct.innerHTML =`<p class="p3"> ${f.previousElementSibling.previousElementSibling.previousElementSibling.textContent}</p>
   `;
   ParentList2.append(ct);
